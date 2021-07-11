@@ -1,0 +1,21 @@
+name: Hugo Build
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@main
+        with:
+          submodules: true
+      - name: Publish Site
+        uses: chabad360/hugo-gh-pages@master
+        with:
+          siteDir: /gihub/workspace/src
+          githubToken: ${{ secrets.GH_PAT }}
+        

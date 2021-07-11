@@ -1,0 +1,3 @@
+[submodule "themes/venture"]
+	path = themes/venture
+	url = https://github.com/jtoll/venture.git
