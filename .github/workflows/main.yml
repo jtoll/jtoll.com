@@ -16,6 +16,6 @@ jobs:
       - name: Publish Site
         uses: chabad360/hugo-gh-pages@master
         with:
-          siteDir: /gihub/workspace/src
+          siteDir: /github/workspace
           githubToken: ${{ secrets.GH_PAT }}
         
